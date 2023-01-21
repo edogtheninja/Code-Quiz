@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coding Quiz</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
@@ -24,16 +24,16 @@
 
       <!-- Welcome page -->
       <section class="card" id="start">
-        <header class="card-header">
-          <h2>Welcome to the Quiz!</h2>
-        </header> 
-        <div  class="card-body">
-          <p> Try to answer the following code related questions within the limit.
-            Keep in mind that incorrect answers will penalize your score/time by
-            fifteen seconds!
-          </p>
-          <button id="startButton">Start Quiz</button>
-        </div>
+      <header class="card-header">
+        <h2>Welcome to the Quiz!</h2>
+      </header>
+      <div class="card-body">
+        <p>Try to answer the following code-related questions within the time limit.
+          Keep in mind that incorrect answers will penalize your score/time by 
+          ten seconds!
+        </p>
+        <button id="startButton">Start Quiz</button>
+      </div>
       </section>
 
       <!-- Questions and answers -->
@@ -43,22 +43,22 @@
         </header>
         <ul class="card-body" id="answers">
         </ul>
-        <footer class="card-footer" id="answers"></footer>
+        <footer class="card-footer"></footer>
       </section>
 
       <!-- Final screen with submit option -->
       <section class="card" id="final-screen">
-        <header class="card-reader">
+        <header class="card-header">
           <h2>All done!</h2>
         </header>
         <div class="card-body">
           <p>Your final score is <span id="final-score"></span>.</p>
-          <input type="text" placeholder="Enter Initials. IE EH">
+          <input type="text" placeholder="Enter Initials. E.g. MO">
           <button id="finalButton">Submit</button>
         </div>
       </section>
 
-      <!-- High score screen -->
+      <!-- High scores screen -->
       <section class="card" id="highscores">
         <header class="card-header">
           <h2>Highscores</h2>
@@ -66,7 +66,7 @@
         <div class="card-body">
           <ol></ol>
         </div>
-        <!-- Bottom highscore button -->
+        <!-- Bottom highscores buttons -->
         <footer class="card-footer">
           <button id="go-back">Go back</button>
           <button id="clear-button">Clear Highscores</button>
@@ -74,6 +74,6 @@
       </section>
 
     </main>
-    <script src="./assets/js/scipt.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
