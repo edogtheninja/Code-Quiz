@@ -1,41 +1,37 @@
 var quiz = {
     questions: [
         {
-            questionsHeading: "Commonly used data types DO NOT include:",
-            availableAnswers: ['strings', 'booleans', 'alerts', 'numbers'],
+            questionHeading: "Commonly used data types DO NOT include",
+            availableAnswers: ["strings", 'booleans', 'alerts', 'numbers'],
             correctAnswer: "alerts"
         },
         {
-            questionsHeading: "The condition in an if / else statement is enclosed within ____.?",
-            availableAnswers: ['quotes', 'curly brackets', 'parentheses', 'square brackets'],
+            questionHeading: "The condition on an if / else statement is enclosed within ___.?",
+            availableAnswers: ["quotes", 'curly brackets', 'parentheses', 'square brackets'],
             correctAnswer: "parentheses"
         },
         {
-            questionsHeading: "Arrays in JavaScript can be used to store ___.?",
+            questionHeading: "Arrays in JavaScript can be used to store ___.?",
             availableAnswers: ["numbers and strings", 'other arrays', 'booleans', 'all of the above'],
             correctAnswer: "all of the above"
         },
         {
-            questionsHeading: "String values must be enclosed within ___ when being assigned to variables.",
+            questionHeading: "String values must be enclosed within ___ when being assigned to variables.",
             availableAnswers: ["commas", 'curly brackets', 'quotes', 'parentheses'],
             correctAnswer: "quotes"
         },
         {
-            questionsHeading: "A very useful tool used during development and debugging for printing content to the debugger is?",
+            questionHeading: "A very useful tool used during development and debugging for printing content to the debugger is?",
             availableAnswers: ["JavaScript", 'terminal/bash', 'for loops', 'console.log'],
             correctAnswer: "console.log"
         },
     ]
-} ;
+};
 
 var highScores = [];
 var questionNumber = 0;
 var finalScore;
 var timerInterval;
-
-// sound effects
-var sfxRight = new Audio('assets/sfx/correct.wav');
-var sfxWrong = new Audio('assets/sfx/incorrect.wav');
 
 function renderQuestionsAndAnswers(index)
 {
@@ -43,11 +39,11 @@ function renderQuestionsAndAnswers(index)
     var answerDisplay = document.querySelector('#answers');
     var currentQuestion = quiz.questions[index];
 
-    questionDisplay.textContent = currentQuestion.questionsHeading;
+    questionDisplay.textContent = currentQuestion.questionHeading;
 
-    // Clear answerDisplay element
+    // Clear answerDisplay element 
     answerDisplay.innerHTML = "";
-
+ 
     // Render a new li for each answer
     for (var i = 0; i < currentQuestion.availableAnswers.length; i++) {
         var answer = currentQuestion.availableAnswers[i];
@@ -63,17 +59,11 @@ function renderQuestionsAndAnswers(index)
             var selectedAnswer = event.target;
             // ... if the answer was correct ...
             if (selectedAnswer.textContent === currentQuestion.correctAnswer) {
-                // plays "right" sound effect
-                sfxRight.play();
-                
                 // ... shows it is correct ...
                 document.querySelector("#quiz .card-footer").textContent = "correct";
             }
             // ...otherwise shows it is incorrect.
             else {
-                //play "wrong" sound effect
-                sfxWrong.play();
-                
                 document.querySelector("#quiz .card-footer").textContent = "incorrect";
 
                 // Decrease score when answer is wrong
@@ -104,8 +94,6 @@ function renderQuestionsAndAnswers(index)
             renderQuestionsAndAnswers(questionNumber);
         });
     }
-
-    
 }
 
 // Get the highscores from local storage and convert to JS
@@ -129,7 +117,6 @@ function clearHighscores () {
 
     setHighScores();
 }
-
 
 // Update the highscores list
 function renderHighscores(){
@@ -264,4 +251,3 @@ function initialise () {
 }
 
 initialise();
-
