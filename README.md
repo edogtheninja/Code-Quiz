@@ -15,4 +15,4 @@ See live version here: []()
 
 ### **Preview**
 
-<!-- ![CODE QUIZ](./assets/img/) -->
+![CODE QUIZ](./assets/img/example.gif)
