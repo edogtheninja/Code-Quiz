@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Style general page */
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+/* Style displayed asnwers */
+li {
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+      rgba(29, 9, 29, 0.3) 0%,
+      rgba(9, 189, 212, 0.541) 100%
+  );
+  color: white;
+  border-radius: 8rem;
+  border: solid black;
+  margin: 1rem;
+  font-weight: bold;
+  padding: 0.4rem;
+}
+
+li:hover {
+  border-color: #80ffff;
+}
+
+/* Style quiz section */
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* Display screens */
+#final-screen{
+  display: none;
+}
+ 
+#quiz{
+  display: none;
+}
+
+#highscores{
+  display: none;
+}
+
+/* Style timer */
+#timer.filled {
+  padding: 0.5em;
+}
+
+span#timer {
+  float: right;
+  border-radius: 0.5em;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(38, 31, 31, 0.796);
+  font-size: larger;
+}
+
+/* Style initials input */
+input{
+  border: solid black;
+  border-radius: 8rem;
+  border-width: 0.1rem;
+  background-color: rgb(230, 232, 236);
+}
+
+/* Style buttons */
+button {
+  text-shadow: 1px 1px 2px black;
+  padding: 0.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+      rgba(29, 9, 29, 0.3) 0%,
+      rgba(4, 146, 172, 0.541) 100%
+  );
+  color: white;
+  border-radius: 8rem;
+  font-weight: bold;
+}
+
+button:hover {
+  border-color: #80ffff;
+}
+
+#highscoresButton{
+  float: left;
+}
